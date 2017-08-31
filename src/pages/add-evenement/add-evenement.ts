@@ -17,11 +17,13 @@ export class AddEvenementPage {
 
   evenement: any = {
     _id: null,
-    author: 'Leslie Dupin',
-    content: '',
-    datePublished: '',
-    dateUpdated: '',
-    title: '',
+    createur: 'Leslie Dupin',
+    titre: '',
+    localisation: '',
+    dateDebut: '',
+    description: '',
+    dateCreation: '',
+    dateModification: '',
     type: 'evenement'
   };
 
@@ -32,9 +34,9 @@ export class AddEvenementPage {
   }
 
   save() {
-    this.evenement._id = this.evenement.title.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
-    this.evenement.datePublished = new Date().toISOString();
-    this.evenement.dateUpdated = new Date().toISOString();
+    this.evenement._id = this.evenement.titre.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
+    this.evenement.dateCreation = new Date().toISOString();
+    this.evenement.dateModification = new Date().toISOString();
 
     this.evenementService.addEvenement(this.evenement);
 

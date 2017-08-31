@@ -4,7 +4,7 @@
       App IEF
     </ion-title>
     <ion-buttons end>
-        <button ion-button icon-only (click)="pushAddPostPage()"><ion-icon name="add"></ion-icon></button>
+        <button ion-button icon-only (click)="pushAddEvenementPage()"><ion-icon name="add"></ion-icon></button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -12,8 +12,8 @@
 <ion-content>
  
     <ion-list>
-        <ion-item (click)="viewPost(post)" *ngFor="let post of posts">
-            {{post.title}}
+        <ion-item (click)="viewEvenement(evenement)" *ngFor="let evenement of evenements">
+            {{evenement.titre}} - le {{evenement.dateDebut | date: 'dd/MM/yyyy'}}
         </ion-item>
     </ion-list>
  

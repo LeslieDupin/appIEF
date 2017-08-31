@@ -8,12 +8,12 @@ import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { TodosProvider } from '../providers/todos/todos';
+import { TabsPage } from '../pages/tabs/tabs';
 import { DataProvider } from '../providers/data/data'; 
 
-import { ViewPostPage } from '../pages/view-post/view-post';
-import { AddPostPage } from '../pages/add-post/add-post';
-import { PostsProvider } from '../providers/posts/posts';
+import { ViewEvenementPage } from '../pages/view-evenement/view-evenement';
+import { AddEvenementPage } from '../pages/add-evenement/add-evenement';
+import { EvenementsProvider } from '../providers/evenements/evenements';
 
 
 
@@ -21,8 +21,9 @@ import { PostsProvider } from '../providers/posts/posts';
   declarations: [
     MyApp,
     HomePage,
-    ViewPostPage,
-    AddPostPage
+    TabsPage,
+    ViewEvenementPage,
+    AddEvenementPage
   ],
   imports: [
     BrowserModule,
@@ -33,16 +34,16 @@ import { PostsProvider } from '../providers/posts/posts';
   entryComponents: [
     MyApp,
     HomePage,
-    ViewPostPage,
-    AddPostPage
+    TabsPage,
+    ViewEvenementPage,
+    AddEvenementPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TodosProvider,
     DataProvider,
-    PostsProvider
+    EvenementsProvider
   ]
 })
 export class AppModule {}

@@ -7,13 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{evenement?.title}}</ion-title>
+    <ion-title>{{evenement?.titre}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <h2>{{evenement?.title}}</h2>
-  <p>{{evenement?.content}}</p>
+  <h2>{{evenement?.titre}}</h2>
+  <p>le {{evenement?.dateDebut | date: 'dd/MM/yyyy' }}</p>
+  <p>à {{evenement?.localisation}}</p>
+  <p>proposé par {{evenement?.createur}}</p>
+  <p>{{evenement?.description}}</p>
 </ion-content>

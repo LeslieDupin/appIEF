@@ -17,14 +17,26 @@
        <ion-list>
     
          <ion-item>
-           <ion-label floating>Title</ion-label>
-           <ion-input [(ngModel)]="evenement.title" type="text"></ion-input>
+           <ion-label floating>Titre</ion-label>
+           <ion-input [(ngModel)]="evenement.titre" type="text"></ion-input>
          </ion-item>
-    
+
          <ion-item>
-           <ion-label floating>Content</ion-label>
-           <ion-input [(ngModel)]="evenement.content" type="text"></ion-input>
+          <ion-label floating>Localisation</ion-label>
+          <ion-input [(ngModel)]="evenement.localisation" type="text"></ion-input>
          </ion-item>
+         
+         
+         <ion-item>
+          <ion-label floating>Date</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="evenement.dateDebut" type="text"></ion-datetime>
+         </ion-item>
+
+         <ion-item>
+           <ion-label floating>Description</ion-label>
+           <ion-input [(ngModel)]="evenement.description" type="text"></ion-input>
+         </ion-item>
+
     
        </ion-list>   
     
@@ -32,6 +44,6 @@
     
    <ion-footer>
     
-       <button (click)="save()" color="light" ion-button full>Save</button>
+       <button (click)="save()" color="light" ion-button full>Je crée mon événement</button>
     
    </ion-footer>
